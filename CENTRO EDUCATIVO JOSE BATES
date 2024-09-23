@@ -1,0 +1,287 @@
+<html lang="es"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Educativo José Bates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            display: flex;
+            height: 100vh;
+        }
+        #menu {
+            width: 250px;
+            background-color: #207cf5;
+            padding: 20px;
+        }
+        #menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #menu ul li {
+            margin-bottom: 10px;
+        }
+        #menu ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        #menu ul li a:hover {
+            background-color: #c7c93a;
+        }
+        #content {
+            flex: 1;
+            padding: 20px;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        /* Estilos para el encabezado */
+        header {
+            background-color: #fae243;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+        }
+        /* Logo */
+        #logo img {
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+        /* Centrar la hora */
+        #reloj {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+</script>
+<p aling-"justify"="">
+<font face="arial" color="black" size="5"></font>
+</p>
+    </style>
+</head>
+<p id="fecha" style="text-align:center; font-size:20px;"></p>
+<script>
+// Fecha centrada
+var date = new Date();
+var d  = date.getDate();
+var day = (d < 10) ? '0' + d : d;
+var m = date.getMonth() + 1;
+var month = (m < 10) ? '0' + m : m;
+var yy = date.getFullYear();
+document.getElementById('fecha').innerHTML = day + "/" + month + "/" + yy;
+</script>
+</script>   
+<script>
+function startTime(){
+today=new Date();
+h=today.getHours();
+m=today.getMinutes();
+s=today.getSeconds();
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);}
+function checkTime(i)
+{if (i<10) {i="0" + i;}return i;}
+window.onload=function(){startTime();}
+</script>
+<div id="reloj" style="font-size:20px;"></div> 
+
+    <body style="background-color: #6dc7e3;">
+    <!-- Encabezado con el logo y el nombre de la escuela -->
+    <header>
+        <div id="logo">
+            <!-- Cambia este src con el enlace correcto a tu logo -->
+            <img data-visualcompletion="media-vc-image" alt="No hay ninguna descripción de la foto disponible." class="x1bwycvy x193iq5w x4fas0m x19kjcj4" referrerpolicy="origin-when-cross-origin" src="https://scontent-qro1-2.xx.fbcdn.net/v/t39.30808-6/322476977_723010262514770_3053351632159026399_n.jpg?_nc_cat=109&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeE79IoHtNdIgDQ9WUpyuxbEhbN_a70a3huFs39rvRreG3wNGgRMtVAxiY7LHyOYtQMKEedYm5Rqej0mxVFqWFgh&amp;_nc_ohc=mws0GhN-RBAQ7kNvgF82cLB&amp;_nc_ht=scontent-qro1-2.xx&amp;_nc_gid=A5UOViQ88Gg3sOs2hx1psfv&amp;oh=00_AYBBPk-4-acwofBQsmNdDyof7MqUsLCqR6kaTxW4QWiHqw&amp;oe=66F59BAC">
+        </div>
+        Centro Educativo José Bates
+    </header>
+     
+    <div id="container">
+        <!-- Menú de navegación -->
+        <div id="menu">
+            <ul>
+                <li><a href="#portada" onclick="mostrarSeccion('portada')">Portada</a></li>
+                <li><a href="#valores" onclick="mostrarSeccion('valores')">Valores</a></li>
+                <li><a href="#niveles" onclick="mostrarSeccion('niveles')">Niveles Educativos</a></li>
+                <li><a href="#mision" onclick="mostrarSeccion('mision')">Misión</a></li>
+                <li><a href="#vision" onclick="mostrarSeccion('vision')">Visión</a></li>
+                <li><a href="#historia" onclick="mostrarSeccion('historia')">Historia</a></li>
+                <li><a href="#admisiones" onclick="mostrarSeccion('admisiones')">Admisiones</a></li>
+                <li><a href="#servicios" onclick="mostrarSeccion('servicios')">Servicios</a></li>
+                <li><a href="#actividades" onclick="mostrarSeccion('actividades')">Actividades Extracurriculares</a></li>
+                <li><a href="#becas" onclick="mostrarSeccion('becas')">Becas</a></li>
+                <li><a href="#noticias" onclick="mostrarSeccion('noticias')">Noticias</a></li>
+                <li><a href="#calendario" onclick="mostrarSeccion('calendario')">Calendario</a></li>
+                <li><a href="#contacto" onclick="mostrarSeccion('contacto')">Contacto</a></li>
+                <li><a href="#profesores" onclick="mostrarSeccion('profesores')">Profesores</a></li>
+                <li><a href="#galeria" onclick="mostrarSeccion('galeria')">Galería de Fotos</a></li>
+            </ul>
+        </div>
+        <!-- Contenido principal -->
+        <div id="content">
+        
+<title>Página con Logos</title>
+    <style>
+        body {
+            background-color: #6dc7e3;
+        }
+        .logo {
+            position: absolute;
+            top: 500px;
+            width: 150px;
+        }
+        .logo-left {
+            left: 350px;
+        }
+        .logo-right {
+            right: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://coparmexcchiapas.org.mx/wp-content/uploads/2021/08/escuela-superior-de-tapachula-.png" class="logo logo-left" alt="Logo Izquierda">
+    
+    <img src="https://coparmexcchiapas.org.mx/wp-content/uploads/2021/08/escuela-superior-de-tapachula-.png" class="logo logo-right" alt="Logo Derecha">
+    
+    <div style="text-align:center; padding-top: 150px;">
+        <!-- Aquí puedes agregar el contenido de tu página --> 
+        <!-- Contenido principal -->
+        <div id="content">
+            <div id="portada" class="section active">
+                <h2>Portada</h2>
+                <p><strong>NOMBRE:</strong> ELVA NELI PAZ ROSARIO</p>
+                <p><strong>LICENCIATURA:</strong> CONTADURÍA E INFORMÁTICA</p>
+                <p><strong>CUATRIMESTRE:</strong> CUARTO CUATRIMESTRE</p>
+                <p><strong>PROYECTO:</strong> CREACIÓN PÁGINA WEB</p>
+                <p><strong>DOCENTE:</strong> ENRIQUE MARTÍNEZ GUTIÉRREZ</p>
+                <p><strong>FECHA:</strong> 22 DE SEPTIEMBRE DE 2024</p>
+            </div>
+
+            <div id="valores" class="section">
+                <h2>Valores</h2>
+                <p>Fomentamos los valores de respeto, responsabilidad y honestidad en nuestros estudiantes.</p>
+            </div>
+
+            <div id="niveles" class="section">
+                <h2>Niveles Educativos</h2>
+                <p>Ofrecemos niveles educativos como: Preescolar, Primaria, Secunadaria y Preparatoria.</p>
+            </div>
+
+            <div id="mision" class="section">
+                <h2>Misión</h2>
+                <p>Nuestra misión es brindar una educación de calidad, promoviendo el desarrollo integral de los estudiantes y fomentando sus habilidades para enfrentar los retos del futuro.</p>
+            </div>
+
+            <div id="vision" class="section">
+                <h2>Visión</h2>
+                <p>Aspiramos a ser un referente en la educación nacional, ofreciendo un ambiente inclusivo y equitativo que prepare a nuestros alumnos para un mundo globalizado.</p>
+            </div>
+
+            <div id="historia" class="section">
+                <h2>Historia</h2>
+                <p>El Centro Educativo José Bates fue fundado en el año 2010 con el objetivo de proporcionar una educación de excelencia en la región de Huixtla, Chiapas.</p>
+            </div>
+
+            <div id="admisiones" class="section">
+                <h2>Admisiones</h2>
+                <p>El proceso de admisión está abierto todo el año. Los interesados deben llenar una solicitud y cumplir con los requisitos académicos establecidos.</p>
+            </div>
+
+            <div id="servicios" class="section">
+                <h2>Servicios</h2>
+                <p>Ofrecemos servicios como Robotica educativa, laboratorio de computación, orientación educativa y comedor estudiantil.</p>
+            </div>
+
+            <div id="actividades" class="section">
+                <h2>Actividades Extracurriculares</h2>
+                <p>Contamos con actividades como deportes, clubes de ciencia y arte, y talleres de música.</p>
+            </div>
+
+            <div id="becas" class="section">
+                <h2>Becas</h2>
+                <p>Ofrecemos programas de becas académicas para estudiantes destacados durante el año.</p>
+            </div>
+
+            <div id="noticias" class="section">
+                <h2>Noticias</h2>
+                <p>Mantente al día con las últimas noticias y eventos del Centro Educativo José Bates.</p>
+            </div>
+
+            <div id="calendario" class="section">
+                <h2>Calendario</h2>
+                <p>Consulta el calendario escolar para conocer las fechas importantes como exámenes, inscripciones y vacaciones.</p>
+            </div>
+
+            <div id="contacto" class="section">
+                <h2>Contacto</h2>
+                <p>Puedes contactarnos a través del correo electrónico colegiojosebates@hotmail.com o llamando al teléfono (964) 642 1367.</p>
+            </div>
+
+            <div id="profesores" class="section">
+                <h2>Profesores</h2>
+                <p>Contamos con un equipo docente altamente capacitado y comprometido con la formación integral de nuestros alumnos.</p>
+
+
+
+    <section id="profesores">
+        <h2>Profesores</h2>
+        
+        <div class="profesor">
+            <img alt="Puede ser una imagen de 1 persona, clarinete y texto" class="xzg4506 xycxndf xua58t2 x4xrfw5 x1lq5wgf xgqcy7u x30kzoy x9jhf4c x9f619 x5yr21d xl1xv1r xh8yej3" referrerpolicy="origin-when-cross-origin" src="https://scontent-qro1-1.xx.fbcdn.net/v/t39.30808-6/456779246_1052111956917901_1668233703222881805_n.jpg?stp=dst-jpg_s206x206&amp;_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=714c7a&amp;_nc_eui2=AeHGWWgCxN7p8vSSMnxzPVb7U8lvSP0Frj9TyW9I_QWuP5ORI3T_Gw-zpPRMFUQ0KB0WW-pQ5dhyh_SVaxITeuHZ&amp;_nc_ohc=dpIHSrMGp6cQ7kNvgECDajL&amp;_nc_ht=scontent-qro1-1.xx&amp;oh=00_AYDBpKIDm55YTFm2ZtzEMEJQ_I17OCnzWlBkWKrR2_2cuw&amp;oe=66F58C24">
+            <h3>Profr. Jerson Trujillo</h3>
+            <p>Materia: Música</p>
+        </div>
+
+        <div class="profesor">
+            <img alt="Puede ser una imagen de 1 persona y texto" class="xzg4506 xycxndf xua58t2 x4xrfw5 x1lq5wgf xgqcy7u x30kzoy x9jhf4c x9f619 x5yr21d xl1xv1r xh8yej3" referrerpolicy="origin-when-cross-origin" src="https://scontent-qro1-1.xx.fbcdn.net/v/t39.30808-6/457010907_1052111063584657_2827794982142432896_n.jpg?stp=dst-jpg_s206x206&amp;_nc_cat=105&amp;ccb=1-7&amp;_nc_sid=714c7a&amp;_nc_eui2=AeHz-waLhHo2oTYwjQSuBOljWoKi9bSAbA5agqL1tIBsDmGj6BbYeQ4gViQ7Jx5egOBXwTGuBxrWePE8pLRVKosg&amp;_nc_ohc=ojqyIQIr9UUQ7kNvgHLVNbH&amp;_nc_ht=scontent-qro1-1.xx&amp;oh=00_AYBXZn8YB9Rni9xHvPwZuOQA1RDmwdNuq_NDOFyjNDzWSQ&amp;oe=66F57872">
+            <h3>Profa. Beverly Rodríguez</h3>
+            <p>Materia: Química</p>
+        </div>
+
+        <div class="profesor">
+            <img alt="Puede ser una imagen de 1 persona y texto" class="xzg4506 xycxndf xua58t2 x4xrfw5 x1lq5wgf xgqcy7u x30kzoy x9jhf4c x9f619 x5yr21d xl1xv1r xh8yej3" referrerpolicy="origin-when-cross-origin" src="https://scontent-qro1-2.xx.fbcdn.net/v/t39.30808-6/456591516_1052108843584879_2526378065229856907_n.jpg?stp=dst-jpg_s206x206&amp;_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=714c7a&amp;_nc_eui2=AeFh2p4wBBnzwn329mMBgv-imVxVjYwbOweZXFWNjBs7B-ow9j_9TfdZvfmQ-1umXRKYy20MvnB3zPIpHfzZFUKX&amp;_nc_ohc=h4n-HahUI1oQ7kNvgEfLf42&amp;_nc_ht=scontent-qro1-2.xx&amp;_nc_gid=AidotAikBx840xaeU8JjVGa&amp;oh=00_AYC6OK04e4-Tln7R617tAHG-NkKu22s3bATjkmj7Xh_ChQ&amp;oe=66F59D9C">
+            <h3>Profa. Alexa Cruz</h3>
+            <p>Docente: 1º Primaria</p>
+        </div>
+    </section>
+
+            </div>
+
+            <div id="galeria" class="section">
+                <h2>Galería de Fotos</h2>
+                <p>Explora nuestra galería para ver las actividades y eventos más recientes de nuestra comunidad escolar.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarSeccion(id) {
+            // Oculta todas las secciones
+            var secciones = document.querySelectorAll('.section');
+            secciones.forEach(function(seccion) {
+                seccion.classList.remove('active');
+            });
+
+            // Muestra la sección seleccionada
+            var seccionSeleccionada = document.getElementById(id);
+            seccionSeleccionada.classList.add('active');
+        }
+    </script>
+  </center>
+
+</body></html>
